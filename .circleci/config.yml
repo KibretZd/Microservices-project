@@ -13,12 +13,13 @@ jobs:
       - checkout
       - run: |
               docker-compose -f docker-compose-build.yaml build --parallel
-              docker tag udagram-api-user ${DOCKERHUB_USERNAME}/udagram-api-user
-              docker tag udagram-api-feed ${DOCKERHUB_USERNAME}/udagram-api-feed
-              docker tag udagram-frontend:local ${DOCKERHUB_USERNAME}/udagram-frontend
-              docker tag reverseproxy ${DOCKERHUB_USERNAME}/reverseproxy
-              echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-              docker push ${DOCKERHUB_USERNAME}/udagram-api-user
-              docker push ${DOCKERHUB_USERNAME}/udagram-api-feed
-              docker push ${DOCKERHUB_USERNAME}/udagram-frontend
-              docker push ${DOCKERHUB_USERNAME}/reverseproxy
+              
+              docker tag udagram-api-user ${DOCKERHUB_USERNAME}/udagram-api-user:v8
+              docker tag udagram-api-feed ${DOCKERHUB_USERNAME}/udagram-api-feed:v8
+              docker tag udagram-frontend:local ${DOCKERHUB_USERNAME}/udagram-frontend:v9.5
+              docker tag reverseproxy ${DOCKERHUB_USERNAME}/reverseproxy:v1
+              echo “$DOCKERHUB_PASSWORD” | docker login -u “$DOCKERHUB_USERNAME” --password-stdin
+              docker push ${DOCKERHUB_USERNAME}/udagram-api-user:v8
+              docker push ${DOCKERHUB_USERNAME}/udagram-api-feed:v8
+              docker push ${DOCKERHUB_USERNAME}/udagram-frontend:v9.5
+              docker push ${DOCKERHUB_USERNAME}/reverseproxy:v1
