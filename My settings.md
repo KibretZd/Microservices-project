@@ -4,20 +4,22 @@ Create a S3 bucket:
     S3 bucket policy:{
         
         {
-        "Version":"2012-10-17",
-        "Statement":[
+    "Version": "2012-10-17",
+    "Statement": [
         {
-            "Sid":"Stmt1625306057759",
-            "Principal":"*",
-            "Action":"s3:*",
-            "Effect":"Allow",
-            "Resource":[
-                "arn:aws:s3:::[bucket-name]",
-                "arn:aws:s3:::[bucket-name]/*"
+            "Sid": "Stmt1625306057759",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::813808706002:root"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::my-813808706002-dev",
+                "arn:aws:s3:::my-813808706002-dev/*"
             ]
         }
-        ]
-        }
+    ]
+}
     }
 
     S3 bucket CORPS:{
