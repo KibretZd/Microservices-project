@@ -2,6 +2,7 @@ Create a S3 bucket:
     bucket name: my-813808706002-dev
 
     S3 bucket policy:{
+        
         {
         "Version":"2012-10-17",
         "Statement":[
@@ -59,4 +60,32 @@ Create a S3 bucket:
 
     Test that your installation was successful with the following command.
         eksctl version
-    
+
+    ### My first eksctl cluster:
+        eksctl create cluster --name udagram-kb-eksctl --region us-east-1
+
+        Test:
+            kubectl get nodes
+
+            kubectl get deployments
+
+            kubectl get services
+    Then configure AWS credintials using environmental variables
+        setx AWS_ACCESS_KEY_ID 
+        setx AWS_SESSION_ACCESS_KEY 
+        set AWS_SESSION_TOKEN 
+Create and configure the following files:
+    feed-deploment.yml
+    user-deploment.yml
+
+
+
+After creating deployments and services for each run the following commands:
+    kubectl apply -f backend-feed-deployment.yml
+    kubectl apply -f backend-user-deployment.yml
+    kubectl apply -f reverseproxy-deployment.yml
+    kubectl apply -f frontend-deployment.yml
+
+Then next port forwarding:
+ kubectl port-forward service/reverseproxy 8080:8080
+ kubectl port-forward service/frontend 8100:8100
