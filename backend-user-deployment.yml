@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: kibretzd/udagram-api-user:v1
+        image: kibretzd/udagram-api-user:v2
         ports:
           - containerPort: 8080
         envFrom:

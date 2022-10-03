@@ -78,8 +78,6 @@ Create and configure the following files:
     feed-deploment.yml
     user-deploment.yml
 
-
-
 After creating deployments and services for each run the following commands:
     kubectl apply -f backend-feed-deployment.yml
     kubectl apply -f backend-user-deployment.yml
