@@ -67,10 +67,8 @@ Create a S3 bucket:
         eksctl create cluster --name udagram-kb-eksctl --region us-east-1
 
         Test:
-            kubectl get nodes
-
+            kubectl get podes
             kubectl get deployments
-
             kubectl get services
     Then configure AWS credintials using environmental variables
         setx AWS_ACCESS_KEY_ID 
