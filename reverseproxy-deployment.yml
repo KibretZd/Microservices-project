@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: kibretzd/reverseproxy:v2
+        image: kibretzd/reverseproxy:v2.5
         ports:
         - containerPort: 8080
         

@@ -4,7 +4,6 @@ kind: Deployment
 metadata:
   name: backend-feed
   labels:
-
     app: backend-feed
 spec:
   replicas: 2
@@ -18,18 +17,18 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: kibretzd/udagram-api-feed:v2
+        image: kibretzd/udagram-api-feed:v2.5
         ports:
           - containerPort: 8080
         envFrom: 
           - configMapRef:
               name: udagram-env
           - secretRef:
-              name: my-udagram-db-secret
+              name: udagramdb-env
         volumeMounts:
           - mountPath: "/root/.aws/"
-            name: my-udagram-aws
+            name: udagram-aws
       volumes:
-        - name: my-udagram-aws
+        - name: udagram-aws
           configMap:
-            name: my-udagram-aws
+            name: udagram-aws

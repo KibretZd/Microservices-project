@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: kibretzd/udagram-api-user:v2
+        image: kibretzd/udagram-api-user:v2.5
         ports:
           - containerPort: 8080
         envFrom:
           - configMapRef:
               name: udagram-env
           - secretRef:
-              name: my-udagram-db-secret
+              name: udagramdb-env

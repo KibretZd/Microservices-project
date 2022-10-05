@@ -6,7 +6,7 @@ data:
   # property-like keys; each key maps to a simple value
   POSTGRES_HOST: postgres.ceybqd3yytov.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: my-813808706002-dev
+  AWS_BUCKET: my-813808706002-bucket
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: testing
