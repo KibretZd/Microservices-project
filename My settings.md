@@ -64,6 +64,7 @@ If they are already installed, run the following command to upgrade:
 
 ### My first eksctl cluster:
 `eksctl create cluster --name udagram-eks-dev --region=us-east-1 --nodes-min=2 --nodes-max=3`
+`eksctl create cluster --name kibret-eks-dev --region us-east-1`
 
 Test:
     `kubectl get nodes`
@@ -75,15 +76,15 @@ Then configure AWS credintials using environmental variables
     setx AWS_SESSION_ACCESS_KEY 
     set AWS_SESSION_TOKEN 
 Create and configure the following files:
-    backend-feed-deployment.yml
-    backend-user-deployment.yml
-    frontend-deployment.yml
-    reverseproxy-deployment.yml
+    "backend-feed-deployment.yml"
+    "backend-user-deployment.yml"
+    "frontend-deployment.yml"
+    "reverseproxy-deployment.yml"
 
-    backend-feed-service.yml
-    backend-user-service.yml
-    frontend-deployment.yml
-    reverseproxy-deployment.yml
+    "backend-feed-service.yml"
+    "backend-user-service.yml"
+    "frontend-deployment.yml"
+    "reverseproxy-deployment.yml"
 
 
 After creating deployments and services for each run the following commands:
