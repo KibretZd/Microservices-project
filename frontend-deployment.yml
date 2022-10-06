@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: kibretzd/udagram-frontend:v3.5
+        image: kibretzd/udagram-frontend:v2.5
         ports:
         - containerPort: 80
         

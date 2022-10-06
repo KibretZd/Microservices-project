@@ -63,7 +63,7 @@ If they are already installed, run the following command to upgrade:
         `eksctl version`
 
 ### My first eksctl cluster:
-`eksctl create cluster --name udagram-eks-cluster-dev --region=us-east-1 --nodes-min=2 --nodes-max=3`
+`eksctl create cluster --name udagram-eks-dev --region=us-east-1 --nodes-min=2 --nodes-max=3`
 
 Test:
     `kubectl get nodes`
