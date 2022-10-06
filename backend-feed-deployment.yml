@@ -17,9 +17,14 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: kibretzd/udagram-api-feed:v2.5
+        image: kibretzd/udagram-api-feed:v3.5
         ports:
           - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         envFrom: 
           - configMapRef:
               name: udagram-env
