@@ -63,7 +63,7 @@ If they are already installed, run the following command to upgrade:
         `eksctl version`
 
 ### My first eksctl cluster:
-`eksctl create cluster --name udagram-eks-cluster --region=us-east-1 --nodes-min=2 --nodes-max=3`
+`eksctl create cluster --name udagram-eks-cluster-dev --region=us-east-1 --nodes-min=2 --nodes-max=3`
 
 Test:
     `kubectl get nodes`
@@ -111,4 +111,4 @@ Verify that the metrics-server deployment is running the desired number of pods 
 `kubectl get deployment metrics-server -n kube-system`
 
 ### Create the HorizontalPodAutoscaler
-`kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10`
+`kubectl autoscale deployment backend-feed --cpu-percent=50 --min=1 --max=10`
